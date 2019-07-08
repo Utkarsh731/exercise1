@@ -1,0 +1,17 @@
+
+import java.util.*;
+public class Main {
+
+ public static void main(String[] args) {
+Scanner sc=new Scanner(System.in);
+  System.out.println("Enter the string");
+String str=sc.nextLine();
+ String words[]=str.split(" ");  
+    String capitalizeWord="";  
+    for(String w:words){  
+        String first=w.substring(0,1);  
+        String afterfirst=w.substring(1);  
+        capitalizeWord+=first.toUpperCase()+afterfirst+" ";  
+    }  
+System.out.println(capitalizeWord);
+  }}
