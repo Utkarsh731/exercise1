@@ -1,0 +1,15 @@
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	    System.out.println("enter the  string:");
+	    Scanner sc=new Scanner(System.in);
+	    String s1=sc.nextLine();
+	    System.out.println("enter part of the string to be replaced");
+	    String s2=sc.nextLine();
+	    System.out.println("enter new part");
+	    String s3=sc.nextLine();
+	    String s=s1.replaceAll(s2,s3);
+	    System.out.println("New String is :"+s);
+	}
+}
