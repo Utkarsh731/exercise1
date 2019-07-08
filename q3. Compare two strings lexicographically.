@@ -1,0 +1,33 @@
+import java.util.*;
+public class Main {
+
+ public static void main(String[] args) {
+Scanner sc=new Scanner(System.in);
+
+    System.out.println("enter the first string");
+  String s1=sc.nextLine();
+    System.out.println("enter the second string");
+  String s2=sc.nextLine();
+  int c=0;
+  for(int i=0;i<Math.min(s1.length(),s2.length());i++){
+      if (s1.charAt(i)<s2.charAt(i)){
+            System.out.println(s1+" is less then "+s2);
+            c=1;
+            break;
+      }
+      else if (s2.charAt(i)<s1.charAt(i)){
+            System.out.println(s2+" is less then "+s1);
+            c=1;
+            break;
+      }
+      }
+      if(c==0){
+          if(s1.length()<s2.length())
+      System.out.println(s1+" is less then "+s2);
+      else if(s2.length()<s1.length())
+       System.out.println(s2+" is less then "+s1);
+       else
+       System.out.println("both strings are same");
+}
+   
+  }}
