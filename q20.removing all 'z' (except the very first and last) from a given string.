@@ -1,0 +1,23 @@
+import java.util.*;
+public class Main {
+
+ public static void main(String[] args) {
+Scanner sc=new Scanner(System.in);
+
+    System.out.println("enter the string");
+  String s1=sc.nextLine();
+  
+    String s3="";
+    s3=s3+s1.charAt(0);
+    for(int i=1;i<s1.length()-1;i++){
+    if(s1.charAt(i)=='z')
+        continue;
+    else 
+    s3+=s1.charAt(i);
+   }
+   s3+=s1.charAt(s1.length()-1);
+System.out.println(s3);
+  }}
+            
+   
+  
