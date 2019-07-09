@@ -1,0 +1,38 @@
+/******************************************************************************
+
+                     
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner sc=new Scanner(System.in);
+        System.out.println("ENTER THE STRING TOO BE CHECK");
+	    String str=sc.nextLine();
+	    int n=str.length(),i,maxLength=1,start=0;
+	    boolean table[][]=new boolean[n][n];
+	    for(i=0;i<n;i++)
+	    table[i][i]=true;
+	    for (i = 0; i < n - 1; ++i) { 
+            if (str.charAt(i) == str.charAt(i + 1)) { 
+                table[i][i + 1] = true; 
+                start = i; 
+                maxLength = 2; 
+            } 
+        } 
+        for (int k = 3; k <= n; ++k) { 
+            for (i = 0; i < n - k + 1; ++i)  
+            {
+                int j = i + k -1;
+                if (table[i + 1][j - 1] && str.charAt(i) ==  
+                                          str.charAt(j)) { 
+                    table[i][j] = true; 
+  
+                    if (k > maxLength) { 
+                        start = i; 
+                        maxLength = k; 
+                    } 
+                } 
+	}
+}
+	     System.out.println(str.substring(start, start+maxLength)); 
+	}}
