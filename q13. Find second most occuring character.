@@ -1,0 +1,45 @@
+import java.util.*;
+public class Main {
+
+ public static void main(String[] args) {
+Scanner sc=new Scanner(System.in);
+
+    System.out.println("enter the string");
+  String s=sc.nextLine();
+  HashMap<Character, Integer> map = new HashMap<Character, Integer>();
+  for(int i=0;i<s.length();i++){
+      char c=s.charAt(i);
+      if (map.containsKey(c)){
+          map.put(c,map.get(c)+1);
+      }
+      else{
+          map.put(c,1);
+      }}
+        char t=' ';
+        int max = Collections.max(map.values());
+        Iterator<Map.Entry<Character, Integer>> mp = map.entrySet().iterator();
+        while (mp.hasNext()) {
+            Map.Entry<Character,Integer> entry = mp.next();
+            if (entry.getValue().equals(max)) {
+                t= entry.getKey();
+                break;
+            }
+        }
+        map.remove(t);
+        max = Collections.max(map.values());
+        Iterator<Map.Entry<Character, Integer>> mmp = map.entrySet().iterator();
+        while (mmp.hasNext()) {
+            Map.Entry<Character,Integer> entry = mmp.next();
+            if (entry.getValue().equals(max)) {
+                 t= entry.getKey();
+                 break;
+            }
+        }
+        System.out.println(t);
+    
+
+  }
+            
+}
+   
+  
